@@ -39,7 +39,7 @@ export const MealPlansSection: React.FC = () => {
 
       <div className="flex sm:flex-col items-center sm:items-end justify-between border-t sm:border-t-0 pt-2 sm:pt-0 border-stone-100 dark:border-stone-800 shrink-0">
         <div className="text-xs font-mono text-stone-500">
-          <span className="font-bold text-stone-900 dark:text-stone-100">{slot.calories}</span> kcal
+          <span className="font-bold text-stone-900 dark:text-stone-100">~{slot.calories}</span> kcal (अंदाजे)
         </div>
         <div className="text-xs font-mono font-semibold text-emerald-700 dark:text-emerald-400">
           <span className="font-bold">{slot.protein}g</span> प्रोटीन
@@ -143,20 +143,24 @@ export const MealPlansSection: React.FC = () => {
 
           <div className="flex items-center gap-4 bg-white dark:bg-stone-900 px-4 py-2.5 rounded-xl border border-stone-200 dark:border-stone-800 shrink-0">
             <div>
-              <div className="text-[11px] text-stone-500">एकूण कॅलरी</div>
+              <div className="text-[11px] text-stone-500">अंदाजे ऊर्जा</div>
               <div className="text-base font-bold text-stone-900 dark:text-stone-100 font-mono">
                 ~{currentDayPlan.totalCalories} kcal
               </div>
             </div>
             <div className="h-7 w-[1px] bg-stone-200 dark:bg-stone-800" />
             <div>
-              <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold">एकूण प्रथिन</div>
+              <div className="text-[11px] text-emerald-700 dark:text-emerald-400 font-semibold">अंदाजे प्रथिने</div>
               <div className="text-base font-bold text-emerald-700 dark:text-emerald-400 font-mono">
                 {currentDayPlan.totalProtein}g
               </div>
             </div>
           </div>
         </div>
+
+        <p className="text-xs leading-relaxed text-stone-600 dark:text-stone-400 bg-stone-50 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-3">
+          पोर्शन, तेलाचे प्रमाण, पाककृती आणि वापरलेल्या घटकांनुसार कॅलरी व प्रथिनांचे आकडे बदलू शकतात. हे केवळ साधारण अंदाज आहेत—वैयक्तिक कॅलरी लक्ष्य किंवा वैद्यकीय आहार-सल्ला नाहीत. तुमच्या गरजेनुसार प्रमाण ठरवा.
+        </p>
 
         {/* Meals Chronological Flow */}
         <div className="space-y-3">
