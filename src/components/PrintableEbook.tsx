@@ -311,6 +311,29 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             ))}
           </div>
 
+          <div className="mt-3 space-y-2">
+            <div className="font-bold text-xs text-emerald-900">माझा रोजचा सवय ट्रॅकर — पूर्ण झाल्यास ✓ करा</div>
+            <table className="w-full border-collapse text-[9px] text-stone-700">
+              <thead><tr className="bg-emerald-50">
+                <th className="border border-stone-300 p-1 text-left">दिवस</th>
+                <th className="border border-stone-300 p-1">पाणी</th>
+                <th className="border border-stone-300 p-1">चालणे / हालचाल</th>
+                <th className="border border-stone-300 p-1">संतुलित ताट</th>
+                <th className="border border-stone-300 p-1">पुरेशी झोप</th>
+                <th className="border border-stone-300 p-1">मूड / ऊर्जा</th>
+              </tr></thead>
+              <tbody>
+                {Array.from({ length: 30 }, (_, i) => (
+                  <tr key={i}>
+                    <td className="border border-stone-300 p-1 font-semibold">{i + 1}</td>
+                    {Array.from({ length: 5 }, (_, j) => <td key={j} className="border border-stone-300 p-1 text-center">□</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="text-[9px] text-stone-500">पाणी पिण्याचे प्रमाण तहान, हवामान, व्यायाम आणि डॉक्टरांच्या सल्ल्यानुसार ठरवा. रोज परिपूर्ण होण्यापेक्षा सातत्य महत्त्वाचे.</p>
+          </div>
+
           <div className="mt-4 p-4 border border-stone-300 rounded-lg bg-stone-50">
             <div className="font-bold text-xs text-emerald-900 mb-2">माझे ३० दिवसांचे परिणाम (Results Log):</div>
             <div className="grid grid-cols-4 gap-2 text-xs">
