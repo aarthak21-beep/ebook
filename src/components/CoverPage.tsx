@@ -46,6 +46,9 @@ export const CoverPage: React.FC<CoverPageProps> = ({ onStartReading, onOpenMeal
               <span>लेखक: <strong className="text-white">{EBOOK_META.author}</strong></span>
               <span className="rounded-full bg-amber-300 px-4 py-2 text-sm font-extrabold text-emerald-950">किंमत {EBOOK_META.price}</span>
             </div>
+            <div className="mt-4 rounded-xl border border-amber-200/25 bg-white/[0.06] px-4 py-3 text-xs leading-6 text-emerald-50/90"><strong className="text-amber-200">पेमेंट सुविधा लवकरच सुरू होईल.</strong><span className="block">सध्या ऑनलाइन खरेदी / पेमेंट सक्रिय नाही. पेमेंट सुरू झाल्यावरच खरेदीची लिंक येथे दिली जाईल.</span></div>
+            <div className="hidden">
+            </div>
           </div>
           <div className="relative min-h-[360px] sm:min-h-[520px] bg-emerald-950/40 p-5 sm:p-9 flex items-center justify-center">
             <div className="absolute inset-5 rounded-[1.6rem] border border-amber-200/20 pointer-events-none" />
