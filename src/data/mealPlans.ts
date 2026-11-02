@@ -4,7 +4,7 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
   {
     day: 1,
     dayName: 'सोमवार (Day 1)',
-    focus: 'डिटॉक्स आणि फायबर प्रारंभ',
+    focus: 'फायबरयुक्त आणि संतुलित सुरुवात',
     totalCalories: 1550,
     totalProtein: 62,
     meals: {
@@ -42,7 +42,7 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
       eveningSnack: {
         time: '५:०० - ५:३० PM',
         mealName: 'संध्याकाळचा चहा/स्नॅक',
-        items: ['१ लहान वाटी भाजलेले काळे चणे (फुटाणे)', '१ कप बिनसाखरेचा किंवा १/२ चमचा गूळ घातलेला गुळाचा चहा'],
+        items: ['१ लहान वाटी भाजलेले काळे चणे (फुटाणे)', '१ कप बिनसाखरेचा चहा किंवा १/२ चमचा गूळ घातलेला चहा'],
         calories: 140,
         protein: 7.0,
         tip: 'बिस्किटे व खारी खाणे पूर्णपणे टाळा.'
@@ -241,7 +241,7 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
   {
     day: 5,
     dayName: 'शुक्रवार (Day 5)',
-    focus: 'मजबूत चयापचय (Metabolism Boost)',
+    focus: 'चयापचय आणि संतुलित ऊर्जा',
     totalCalories: 1560,
     totalProtein: 66,
     meals: {
@@ -341,7 +341,7 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
       dinner: {
         time: '७:३० PM',
         mealName: 'रात्रीचे जेवण',
-        items: ['२ लहान मुंग डाळ व पालकाचे धिरडे (डोसा)', '१ वाटी ताजे दही', 'हिरवी चटणी'],
+        items: ['२ लहान मूग डाळ व पालकाची धिरडी (डोसा)', '१ वाटी ताजे दही', 'हिरवी चटणी'],
         calories: 380,
         protein: 18.0
       },
