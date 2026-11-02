@@ -204,7 +204,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
               <div key={day.day} className="p-2.5 border border-stone-300 rounded-lg bg-stone-50">
                 <div className="flex justify-between font-bold text-emerald-900 mb-1">
                   <span>{day.dayName} - {day.focus}</span>
-                  <span className="font-mono">{day.totalCalories} kcal | {day.totalProtein}g प्रोटीन</span>
+                  <span className="font-mono">अंदाजे {day.totalCalories} kcal | {day.totalProtein}g प्रोटीन</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-[11px] text-stone-700">
                   <div><strong>नाश्ता:</strong> {day.meals.breakfast.items.join(', ')}</div>
@@ -235,7 +235,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
               <div key={day.day} className="p-2.5 border border-stone-300 rounded-lg bg-stone-50">
                 <div className="flex justify-between font-bold text-emerald-900 mb-1">
                   <span>{day.dayName} - {day.focus}</span>
-                  <span className="font-mono">{day.totalCalories} kcal | {day.totalProtein}g प्रोटीन</span>
+                  <span className="font-mono">अंदाजे {day.totalCalories} kcal | {day.totalProtein}g प्रोटीन</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-[11px] text-stone-700">
                   <div><strong>नाश्ता:</strong> {day.meals.breakfast.items.join(', ')}</div>
@@ -362,7 +362,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
 
           <div className="space-y-4 max-w-lg mx-auto text-sm text-emerald-100/90 leading-relaxed">
             <p>
-              तुम्ही हे ३० दिवस यशस्वीरित्या पूर्ण केले म्हणजे तुम्ही केवळ वजन कमी केलेले नाही, तर तुमच्या शरीराला, मनाला आणि अन्नसंस्कृतीला एका नव्या उंचीवर नेले आहे.
+              तुम्ही हे ३० दिवस पूर्ण केले म्हणजे वजनाच्या आकड्यापलीकडे जाऊन शरीराची काळजी, मनाची ऊर्जा आणि चांगल्या सवयी यांना प्राधान्य दिले आहे.
             </p>
             <p>
               घरचे साधे जेवण, पुरेसे पाणी, रोज चालणे आणि शांत झोप - हेच निरोगी आयुष्याचे चिरंतन रहस्य आहे.
