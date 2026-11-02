@@ -190,7 +190,11 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
               ७-दिवस संपूर्ण शाकाहारी डाएट चार्ट (Veg Meal Plan)
             </h2>
             <img src={breakfastImage} alt="महाराष्ट्रीयन पौष्टिक नाश्ता" className="mt-3 w-full h-40 object-cover rounded-xl" />
-            <p className="text-xs text-stone-500">कॅलरी लक्ष्य: ~१५०० - १६०० kcal · प्रथिन: ६०-६५ ग्रॅम</p>
+            <p className="text-xs text-stone-500">नमुना दिवसाचे अंदाजे पोषणमूल्य · वैयक्तिक कॅलरी गरज वेगळी असू शकते</p>
+          </div>
+
+          <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-[10px] leading-relaxed text-stone-700">
+            <strong>घरगुती मापं:</strong> १ मध्यम वाटी ≈ १५० ml · १ कप ≈ २०० ml · मध्यम पोळी ≈ ६ इंच · तेलाचा १ चमचा = ५ ml. भाकरीचा आकार आणि वाटीचे माप घराघरानुसार बदलते. ताटाचा अर्धा भाग भाजी/सलाड, चतुर्थांश धान्य आणि चतुर्थांश डाळ/उसळ/पनीर/अंडी/मासे/चिकन ठेवा. ही नमुना प्रमाणं आहेत; वैयक्तिक गरजेनुसार बदल करा.
           </div>
 
           <div className="space-y-3 text-xs">
@@ -217,7 +221,11 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             <h2 className="text-2xl font-bold font-marathi-display text-emerald-900">
               ७-दिवस संपूर्ण मांसाहारी डाएट चार्ट (Non-Veg Meal Plan)
             </h2>
-            <p className="text-xs text-stone-500">कॅलरी लक्ष्य: ~१५५० - १६५० kcal · प्रथिन: ७५-९० ग्रॅम</p>
+            <p className="text-xs text-stone-500">नमुना दिवसाचे अंदाजे पोषणमूल्य · वैयक्तिक कॅलरी गरज वेगळी असू शकते</p>
+          </div>
+
+          <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-[10px] leading-relaxed text-stone-700">
+            <strong>घरगुती मापं:</strong> १ मध्यम वाटी ≈ १५० ml · १ कप ≈ २०० ml · मध्यम पोळी ≈ ६ इंच · तेलाचा १ चमचा = ५ ml. भाकरीचा आकार आणि वाटीचे माप घराघरानुसार बदलते. ताटाचा अर्धा भाग भाजी/सलाड, चतुर्थांश धान्य आणि चतुर्थांश डाळ/उसळ/पनीर/अंडी/मासे/चिकन ठेवा. ही नमुना प्रमाणं आहेत; वैयक्तिक गरजेनुसार बदल करा.
           </div>
 
           <div className="space-y-3 text-xs">
