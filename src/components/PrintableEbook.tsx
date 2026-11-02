@@ -15,7 +15,7 @@ interface PrintableEbookProps {
 
 export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) => {
   return (
-    <div className="bg-[#525659] py-8 min-h-screen">
+    <div className="bg-[#e9e7e1] py-8 min-h-screen">
       {/* Top Floating Control Bar (Hidden in print) */}
       <div className="no-print max-w-4xl mx-auto px-4 mb-6 flex items-center justify-between bg-white dark:bg-stone-900 p-4 rounded-xl shadow-lg border border-stone-300 dark:border-stone-700">
         <div className="text-sm font-semibold text-stone-800 dark:text-stone-200">
