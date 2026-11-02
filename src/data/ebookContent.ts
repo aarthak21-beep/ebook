@@ -3,10 +3,11 @@ import { Chapter } from '../types/ebook';
 export const EBOOK_META = {
   title: 'घरचं जेवण, फिट शरीर!',
   subtitle: '३० दिवसांचा मराठी Healthy Diet प्लॅन',
-  author: 'मराठी फिटनेस गाईड',
+  author: 'MOTi knowledge team',
   version: '2.0 Premium Edition',
   price: '₹99',
-  publisher: 'मराठी डिजिटल फिटनेस पब्लिकेशन्स, महाराष्ट्र',
+  publisher: 'MOTi publications',
+  organization: 'the MOTi group',
   disclaimer: `वैद्यकीय इशारा (Medical Disclaimer): हे पुस्तक केवळ सामान्य आरोग्य आणि पोषण शिक्षणासाठी (Educational Purpose) तयार करण्यात आले आहे. हे कोणतेही वैद्यकीय उपचार किंवा डॉक्टरांच्या सल्ल्याचा पर्याय नाही. जर तुम्हाला मधुमेह (Diabetes), रक्तदाब (Blood Pressure), मूत्रपिंडाचे आजार (Kidney Conditions), थायरॉईड, गर्भधारणा (Pregnancy) किंवा इतर कोणताही वैद्यकीय आजार असेल, तर आहारात कोणताही मोठा बदल करण्यापूर्वी कृपया तुमच्या मान्यताप्राप्त आहारतज्ज्ञ (Registered Dietitian) किंवा फॅमिली डॉक्टरांचा सल्ला नक्की घ्या. हे पुस्तक ICMR-NIN, FSSAI Eat Right India आणि WHO च्या सर्वसामान्य मार्गदर्शक तत्त्वांवर आधारित आहे.`
 };
 
