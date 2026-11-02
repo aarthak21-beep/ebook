@@ -1,103 +1,72 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@layer base {
-  body {
-    font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    color: #1c2826;
-    background-color: #faf8f5;
-  }
+:root {
+  color-scheme: light;
+  --forest: #174b38;
+  --forest-deep: #103629;
+  --leaf: #347653;
+  --cream: #fbf8ef;
+  --gold: #e7b94f;
 }
 
-.font-marathi-display {
-  font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #24342d;
+  background:
+    radial-gradient(ellipse at 8% 0%, rgba(231,185,79,.10), transparent 32rem),
+    linear-gradient(180deg, #fcfaf4 0%, #f6f4ec 100%);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
-
-.font-marathi-accent {
-  font-family: 'Yatra One', 'Noto Sans Devanagari', cursive;
+::selection { background: #d9eddf; color: #103629; }
+button { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible {
+  outline: 3px solid #e7b94f;
+  outline-offset: 3px;
 }
+.font-marathi-display { font-family: 'Rozha One', 'Noto Sans Devanagari', serif; }
+.font-marathi-accent { font-family: 'Yatra One', 'Noto Sans Devanagari', cursive; }
+.font-marathi-body { font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif; }
 
-.font-marathi-body {
-  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
-}
+#root { min-height: 100vh; }
+main { isolation: isolate; }
+.no-print button { transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease; }
+.no-print button:active { transform: translateY(1px) scale(.985); }
 
-/* Custom Print and A4 Ebook Formatting */
-@media print {
-  @page {
-    size: A4 portrait;
-    margin: 12mm 14mm;
-  }
-
-  body {
-    background-color: #ffffff !important;
-    color: #111827 !important;
-    font-size: 11pt;
-    line-height: 1.5;
-  }
-
-  .no-print {
-    display: none !important;
-  }
-
-  .print-only {
-    display: block !important;
-  }
-
-  .page-break-before {
-    page-break-before: always;
-    break-before: page;
-  }
-
-  .page-break-after {
-    page-break-after: always;
-    break-after: page;
-  }
-
-  .page-break-inside-avoid {
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  .a4-page-frame {
-    box-shadow: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    max-width: 100% !important;
-    min-height: auto !important;
-  }
-}
-
-/* Screen A4 Simulator */
 .a4-sheet {
   width: 210mm;
   min-height: 297mm;
-  margin: 0 auto 2rem auto;
-  background: #ffffff;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  margin: 0 auto 2rem;
+  background: #fffefa;
+  box-shadow: 0 18px 55px -24px rgba(22, 47, 34, .30);
   padding: 18mm 20mm;
   box-sizing: border-box;
 }
+.page-break-before { page-break-before: always; break-before: page; }
+.page-break-after { page-break-after: always; break-after: page; }
+.page-break-inside-avoid { page-break-inside: avoid; break-inside: avoid; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f0eee6; }
+::-webkit-scrollbar-thumb { background: #6b947b; border: 2px solid #f0eee6; border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: #347653; }
 
 @media (max-width: 860px) {
-  .a4-sheet {
-    width: 100%;
-    min-height: auto;
-    padding: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
+  .a4-sheet { width: 100%; min-height: auto; padding: 1.25rem; margin-bottom: 1.5rem; }
 }
-
-/* Custom scrollbars */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
-::-webkit-scrollbar-track {
-  background: #f1ede4;
+@media print {
+  @page { size: A4 portrait; margin: 12mm 14mm; }
+  html, body { background: #fff !important; color: #17251d !important; font-size: 10.5pt; line-height: 1.48; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  .page-break-before { page-break-before: always; break-before: page; }
+  .page-break-after { page-break-after: always; break-after: page; }
+  .page-break-inside-avoid { page-break-inside: avoid; break-inside: avoid; }
+  .a4-sheet { width: 100% !important; min-height: 0 !important; box-shadow: none !important; border-radius: 0 !important; border: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
+  img { max-width: 100% !important; }
 }
-::-webkit-scrollbar-thumb {
-  background: #2d6a4f;
-  border-radius: 3px;
-}
-
