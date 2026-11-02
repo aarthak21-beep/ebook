@@ -1,4 +1,5 @@
 import React from 'react';
+import coverImage from '../assets/images/ebook_cover_thali_1793638576728.jpg';
 import { EBOOK_META, CHAPTERS } from '../data/ebookContent';
 import { HEALTHY_RECIPES } from '../data/recipes';
 import { VEG_7_DAY_PLAN, NON_VEG_7_DAY_PLAN } from '../data/mealPlans';
@@ -54,7 +55,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
           <div className="my-6 flex justify-center">
             <div className="w-80 h-96 rounded-2xl overflow-hidden shadow-2xl border-2 border-yellow-400/60">
               <img
-                src="/src/assets/images/ebook_cover_thali_1793638576728.jpg"
+                src={coverImage}
                 alt="अस्सल महाराष्ट्रीयन थाळी"
                 className="w-full h-full object-cover"
               />
