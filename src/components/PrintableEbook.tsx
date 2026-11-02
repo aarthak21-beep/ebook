@@ -1,5 +1,8 @@
 import React from 'react';
 import coverImage from '../assets/images/ebook_cover_thali_1793638576728.jpg';
+import breakfastImage from '../assets/images/healthy_breakfast_poha_1793638576917.jpg';
+import workoutImage from '../assets/images/home_workout_yoga_1793638578050.jpg';
+import proteinImage from '../assets/images/protein_rich_sources_1793638577287.jpg';
 import { EBOOK_META, CHAPTERS } from '../data/ebookContent';
 import { HEALTHY_RECIPES } from '../data/recipes';
 import { VEG_7_DAY_PLAN, NON_VEG_7_DAY_PLAN } from '../data/mealPlans';
@@ -134,6 +137,9 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             <div className="text-xs italic bg-emerald-50 p-2.5 rounded border border-emerald-200 text-emerald-900">
               "{ch.summary}"
             </div>
+            {ch.id === 4 && <figure className="rounded-xl overflow-hidden border border-emerald-100 bg-emerald-50"><img src={proteinImage} alt="डाळी, कडधान्ये आणि प्रथिनयुक्त अन्नपदार्थ" className="w-full h-44 object-cover" /><figcaption className="px-3 py-1.5 text-[10px] text-emerald-900">प्रथिनांचे घरगुती स्रोत</figcaption></figure>}
+            {ch.id === 10 && <figure className="rounded-xl overflow-hidden border border-emerald-100 bg-emerald-50"><img src={breakfastImage} alt="पौष्टिक पोहे आणि नाश्ता" className="w-full h-44 object-cover" /><figcaption className="px-3 py-1.5 text-[10px] text-emerald-900">घरच्या घरी बनवता येणारा पौष्टिक नाश्ता</figcaption></figure>}
+            {ch.id === 20 && <figure className="rounded-xl overflow-hidden border border-emerald-100 bg-emerald-50"><img src={workoutImage} alt="घरच्या घरी व्यायाम आणि योग" className="w-full h-44 object-cover" /><figcaption className="px-3 py-1.5 text-[10px] text-emerald-900">नवशिक्यांसाठी घरच्या घरी व्यायाम</figcaption></figure>}
 
             <div className="space-y-4 text-sm leading-relaxed">
               {ch.sections.map((sec, sIdx) => (
@@ -183,6 +189,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             <h2 className="text-2xl font-bold font-marathi-display text-emerald-900">
               ७-दिवस संपूर्ण शाकाहारी डाएट चार्ट (Veg Meal Plan)
             </h2>
+            <img src={breakfastImage} alt="महाराष्ट्रीयन पौष्टिक नाश्ता" className="mt-3 w-full h-40 object-cover rounded-xl" />
             <p className="text-xs text-stone-500">कॅलरी लक्ष्य: ~१५०० - १६०० kcal · प्रथिन: ६०-६५ ग्रॅम</p>
           </div>
 
@@ -264,6 +271,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             <h2 className="text-2xl font-bold font-marathi-display text-emerald-900">
               ३० दिवसांचे प्रोग्रेसिव्ह फिटनेस वर्कशीट (Printable Tracker)
             </h2>
+            <img src={workoutImage} alt="घरच्या घरी व्यायाम" className="mt-3 w-full h-36 object-cover rounded-xl" />
             <p className="text-xs text-stone-500">रोज रात्री झोपण्यापूर्वी पूर्ण झालेल्या टास्कवर पेनाने [✓] करा.</p>
           </div>
 
