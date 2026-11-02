@@ -69,17 +69,13 @@ main { isolation: isolate; }
   .page-break-inside-avoid { page-break-inside: avoid; break-inside: avoid; }
 
   .a4-sheet.ebook-cover {
-    background: #ffffff !important;
-    color: #17251d !important;
-    border: 2px solid #174b38 !important;
+    background: #1b4332 !important;
+    color: #ffffff !important;
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
-  .ebook-cover h1 { color: #103629 !important; }
-  .ebook-cover p { color: #174b38 !important; }
-  .ebook-cover .text-yellow-300,
-  .ebook-cover .text-yellow-200,
-  .ebook-cover .text-yellow-100,
-  .ebook-cover .text-emerald-100 { color: #174b38 !important; }
-  .ebook-cover .border-t { border-color: #b7c9bd !important; }
+  .ebook-cover h1 { color: #ffffff !important; }
+  .ebook-cover p { color: #fef3c7 !important; }
   .a4-sheet { width: 100% !important; min-height: 0 !important; box-shadow: none !important; border-radius: 0 !important; border: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
   img { max-width: 100% !important; height: auto; }
   figure, article, tr, .rounded-xl, .rounded-lg, .rounded, .border-b,
