@@ -24,9 +24,9 @@ export const Header: React.FC<HeaderProps> = ({
           <span className="p-2 rounded-xl bg-emerald-900 text-amber-200 shadow-sm group-hover:rotate-[-4deg] transition-transform"><BookOpen className="w-5 h-5" /></span>
           <span className="tracking-tight">घरचं जेवण, फिट शरीर!</span>
         </button>
-        <nav className="hidden lg:flex items-center gap-1 text-sm font-semibold text-stone-600 dark:text-stone-300">
+        <nav aria-label="मुख्य नेव्हिगेशन" className="hidden lg:flex items-center gap-1 text-sm font-semibold text-stone-600 dark:text-stone-300">
           {links.map(([id, label]) => (
-            <button key={id} onClick={() => setActiveTab(id)} className={`px-3 py-2 rounded-xl transition-all whitespace-nowrap ${activeTab === id ? 'bg-emerald-900 text-white shadow-sm' : 'hover:bg-emerald-50 dark:hover:bg-stone-800 hover:text-emerald-900 dark:hover:text-emerald-200'}`}>
+            <button key={id} type="button" aria-current={activeTab === id ? "page" : undefined} onClick={() => setActiveTab(id)} className={`px-3 py-2 rounded-xl transition-all whitespace-nowrap ${activeTab === id ? 'bg-emerald-900 text-white shadow-sm' : 'hover:bg-emerald-50 dark:hover:bg-stone-800 hover:text-emerald-900 dark:hover:text-emerald-200'}`}>
               {label}
             </button>
           ))}
@@ -43,9 +43,9 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
         </div>
       </div>
-      <nav className="lg:hidden flex items-center gap-1 px-3 pb-2 overflow-x-auto border-t border-stone-100 dark:border-stone-800 pt-2 text-xs font-semibold">
+      <nav aria-label="मुख्य नेव्हिगेशन" className="lg:hidden flex items-center gap-1 px-3 pb-2 overflow-x-auto border-t border-stone-100 dark:border-stone-800 pt-2 text-xs font-semibold">
         {links.map(([id, label]) => (
-          <button key={id} onClick={() => setActiveTab(id)} className={`px-3 py-2 rounded-lg whitespace-nowrap ${activeTab === id ? 'bg-emerald-900 text-white' : 'text-stone-600 dark:text-stone-300 hover:bg-emerald-50 dark:hover:bg-stone-800'}`}>{label}</button>
+          <button key={id} type="button" aria-current={activeTab === id ? "page" : undefined} onClick={() => setActiveTab(id)} className={`px-3 py-2 rounded-lg whitespace-nowrap ${activeTab === id ? 'bg-emerald-900 text-white' : 'text-stone-600 dark:text-stone-300 hover:bg-emerald-50 dark:hover:bg-stone-800'}`}>{label}</button>
         ))}
       </nav>
     </header>
