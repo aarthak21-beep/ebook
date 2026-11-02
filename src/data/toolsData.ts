@@ -2,18 +2,18 @@ import { GroceryItem } from '../types/ebook';
 
 export const GROCERY_LIST: GroceryItem[] = [
   // धान्ये व डाळी
-  { id: 'g1', category: 'धान्ये व डाळी', name: 'ज्वारी (दळण्यासाठी)', englishName: 'Jowar (Sorghum)', monthlyQty: '५ किलो', benefit: 'पोटाची चरबी कमी करण्यास उत्तम, फायबर समृद्ध' },
+  { id: 'g1', category: 'धान्ये व डाळी', name: 'ज्वारी (दळण्यासाठी)', englishName: 'Jowar (Sorghum)', monthlyQty: '५ किलो', benefit: 'फायबरयुक्त धान्य; विविध धान्यांसोबत आहारात वापरता येते' },
   { id: 'g2', category: 'धान्ये व डाळी', name: 'बाजरी (थंडीत विशेष उपयुक्त)', englishName: 'Bajra (Pearl Millet)', monthlyQty: '२ किलो', benefit: 'ऊर्जा व लोहाचा (Iron) समृद्ध स्त्रोत' },
   { id: 'g3', category: 'धान्ये व डाळी', name: 'थालीपीठ भाजणी पीठ', englishName: 'Thalipeeth Bhajani Flour', monthlyQty: '२ किलो', benefit: 'मल्टीग्रेन पोषक घटक व झटपट नाश्ता' },
-  { id: 'g4', category: 'धान्ये व डाळी', name: 'पिवळी मूग डाळ (धुतलेली)', englishName: 'Yellow Moong Dal', monthlyQty: '२ किलो', benefit: 'पचनास सर्वात हलकी, गॅस न होणारी प्रथिने' },
+  { id: 'g4', category: 'धान्ये व डाळी', name: 'पिवळी मूग डाळ (धुतलेली)', englishName: 'Yellow Moong Dal', monthlyQty: '२ किलो', benefit: 'प्रथिनांचा स्रोत; पचनाची सहनशीलता व्यक्तीनुसार बदलते' },
   { id: 'g5', category: 'धान्ये व डाळी', name: 'तूर डाळ व मसूर डाळ', englishName: 'Toor & Masoor Dal', monthlyQty: '२ किलो', benefit: 'रोजच्या वरणासाठी आवश्यक प्रथिने' },
   { id: 'g6', category: 'धान्ये व डाळी', name: 'अख्खे हिरवे मूग व मटकी', englishName: 'Whole Moong & Matki', monthlyQty: '२ किलो', benefit: 'मोड आणून उसळ व सॅलडसाठी सर्वोत्तम' },
-  { id: 'g7', category: 'धान्ये व डाळी', name: 'काळे हरभरे (देशी चणे)', englishName: 'Black Chickpeas (Kala Chana)', monthlyQty: '१.५ किलो', benefit: 'स्वस्त प्रथिन, लोह आणि दीर्घकाळ भूक नियंत्रणात राहते' },
+  { id: 'g7', category: 'धान्ये व डाळी', name: 'काळे हरभरे (देशी चणे)', englishName: 'Black Chickpeas (Kala Chana)', monthlyQty: '१.५ किलो', benefit: 'परवडणारे प्रथिन व लोह; फायबरमुळे तृप्तीला मदत होऊ शकते' },
   { id: 'g8', category: 'धान्ये व डाळी', name: 'चणाडाळीचे ताजे बेसन', englishName: 'Gram Flour (Besan)', monthlyQty: '१.५ किलो', benefit: 'चिला, धिरडे व पिठल्यासाठी उपयुक्त' },
   { id: 'g9', category: 'धान्ये व डाळी', name: 'जाड पोहे व रोल्ड ओट्स', englishName: 'Rolled Oats & Thick Poha', monthlyQty: '२ किलो', benefit: 'सकाळच्या जलद आणि फायबरयुक्त नाश्त्यासाठी' },
 
   // प्रथिनयुक्त पदार्थ
-  { id: 'p1', category: 'प्रथिनयुक्त पदार्थ', name: 'सोया चंक्स / सोयाबीन दाणे', englishName: 'Soya Chunks', monthlyQty: '१ किलो', benefit: '५२% प्रोटीन! शाकाहाऱ्यांसाठी सर्वात स्वस्त प्रथिन स्त्रोत' },
+  { id: 'p1', category: 'प्रथिनयुक्त पदार्थ', name: 'सोया चंक्स / सोयाबीन दाणे', englishName: 'Soya Chunks', monthlyQty: '१ किलो', benefit: 'प्रथिनांचा किफायतशीर वनस्पती-आधारित स्रोत; उत्पादनानुसार पोषणमूल्य बदलते' },
   { id: 'p2', category: 'प्रथिनयुक्त पदार्थ', name: 'ताजी अंडी (मांसाहारींसाठी)', englishName: 'Farm Fresh Eggs', monthlyQty: '३० ते ६० अंडी', benefit: 'सर्वोत्तम बायो-अव्हेलेबिलिटी प्रोटीन (६ ग्रॅम/अंडे)' },
   { id: 'p3', category: 'प्रथिनयुक्त पदार्थ', name: 'गाईचे किंवा म्हशीचे ताजे दूध', englishName: 'Milk for Curd/Paneer', monthlyQty: '१ लिटर/दिवस', benefit: 'घरचे दही, ताक व पनीर बनवण्यासाठी' },
   { id: 'p4', category: 'प्रथिनयुक्त पदार्थ', name: 'कच्चे पनीर (लो फॅट)', englishName: 'Paneer (Cottage Cheese)', monthlyQty: '१ किलो (आवश्यकतेनुसार)', benefit: 'शाकाहारी कॅल्शियम व प्रथिनांचा खजिना' },
@@ -21,22 +21,22 @@ export const GROCERY_LIST: GroceryItem[] = [
 
   // भाज्या व फळे
   { id: 'v1', category: 'भाज्या व फळे', name: 'हिरव्या पालेभाज्या (पालक, मेथी, शेपू)', englishName: 'Spinach, Fenugreek, Dill', monthlyQty: 'आठवड्यातून ३ वेळा', benefit: 'कॅलरी अत्यंत कमी, लोह व जीवनसत्त्वे मुबलक' },
-  { id: 'v2', category: 'भाज्या व फळे', name: 'काकडी, टोमॅटो, गाजर, बीट', englishName: 'Cucumber, Tomato, Carrot, Beet', monthlyQty: 'आठवडी ५ किलो', benefit: 'सॅलडसाठी अनिवार्य; रक्तातील साखर स्थिर ठेवते' },
+  { id: 'v2', category: 'भाज्या व फळे', name: 'काकडी, टोमॅटो, गाजर, बीट', englishName: 'Cucumber, Tomato, Carrot, Beet', monthlyQty: 'आठवडी ५ किलो', benefit: 'सॅलड व विविध पदार्थांसाठी; फायबर आणि सूक्ष्मपोषकांचा स्रोत' },
   { id: 'v3', category: 'भाज्या व फळे', name: 'दुधी भोपळा, दोडका, पडवळ, भेंडी', englishName: 'Bottle Gourd, Ridge Gourd', monthlyQty: 'आठवडी ३ किलो', benefit: 'पचनास हलक्या आणि पाण्याचे प्रमाण जास्त असणाऱ्या भाज्या' },
-  { id: 'v4', category: 'भाज्या व फळे', name: 'लिंबू, आले, लसूण, हिरवी मिरची', englishName: 'Lemon, Ginger, Garlic', monthlyQty: '१ किलो', benefit: 'चयापचय (Metabolism) वाढवण्यासाठी' },
+  { id: 'v4', category: 'भाज्या व फळे', name: 'लिंबू, आले, लसूण, हिरवी मिरची', englishName: 'Lemon, Ginger, Garlic', monthlyQty: '१ किलो', benefit: 'चव आणि पदार्थांना सुगंध देण्यासाठी' },
   { id: 'v5', category: 'भाज्या व फळे', name: 'हंगामी फळे (पेरू, पपई, सफरचंद, डाळिंब)', englishName: 'Seasonal Fruits', monthlyQty: 'आठवडी ३-४ किलो', benefit: 'नॅचरल अँटीऑक्सिडंट्स आणि गोडाची इच्छा शमवण्यासाठी' },
 
   // मसाले व तेल
   { id: 'm1', category: 'मसाले व तेल', name: 'लाकडी घाण्याचे शेंगदाणा किंवा मोहरी तेल', englishName: 'Cold Pressed Peanut/Mustard Oil', monthlyQty: '१.५ लिटर (३ जणांच्या कुटुंबासाठी)', benefit: 'शुद्ध अनरिफाइन्ड तेल, नियंत्रित प्रमाणात वापरणे' },
-  { id: 'm2', category: 'मसाले व तेल', name: 'घरगुती साजूक गाईचे तूप', englishName: 'Pure Desi Cow Ghee', monthlyQty: '५०० ग्रॅम', benefit: 'पचन सुधारते आणि फॅट-सोल्युबल व्हिटॅमिन्स शोषून घेते' },
-  { id: 'm3', category: 'मसाले व तेल', name: 'सैंधव मीठ (Pink Salt)', englishName: 'Rock Salt (Sendha Namak)', monthlyQty: '१ किलो', benefit: 'कमी सोडियम, वॉटर रिटेंशन आणि सूज टाळते' },
-  { id: 'm4', category: 'मसाले व तेल', name: 'जिरे, ओवा, हिंग, हळद, मोहरी', englishName: 'Cumin, Carom, Asafoetida, Turmeric', monthlyQty: '२५० ग्रॅम प्रत्येकी', benefit: 'पाचक अग्नी प्रदीप्त ठेवण्यास मदत' },
+  { id: 'm2', category: 'मसाले व तेल', name: 'घरगुती साजूक गाईचे तूप', englishName: 'Pure Desi Cow Ghee', monthlyQty: '५०० ग्रॅम', benefit: 'स्निग्ध पदार्थ; मर्यादित प्रमाणात आणि एकूण आहारानुसार वापरा' },
+  { id: 'm3', category: 'मसाले व तेल', name: 'सैंधव मीठ (Pink Salt)', englishName: 'Rock Salt (Sendha Namak)', monthlyQty: '१ किलो', benefit: 'सैंधव मिठातही सोडियम असते; एकूण मीठ मर्यादित ठेवणे महत्त्वाचे' },
+  { id: 'm4', category: 'मसाले व तेल', name: 'जिरे, ओवा, हिंग, हळद, मोहरी', englishName: 'Cumin, Carom, Asafoetida, Turmeric', monthlyQty: '२५० ग्रॅम प्रत्येकी', benefit: 'फोडणी व चवीसाठी वापरले जाणारे पारंपरिक मसाले' },
   { id: 'm5', category: 'मसाले व तेल', name: 'पांढरे तीळ व जवस (Flaxseeds)', englishName: 'Sesame & Flax Seeds', monthlyQty: '५०० ग्रॅम', benefit: 'ओमेगा-३, फायबर आणि कॅल्शियमचा स्त्रोत' },
 
   // हेल्दी स्नॅक्स
-  { id: 's1', category: 'हेल्दी स्नॅक्स', name: 'भाजलेले चणे (फुटाणे)', englishName: 'Roasted Chana', monthlyQty: '१ किलो', benefit: 'संध्याकाळच्या भुकेसाठी सर्वोत्तम बिनतेलाचा स्नॅक' },
-  { id: 's2', category: 'हेल्दी स्नॅक्स', name: 'मखाने (Foxnuts)', englishName: 'Phool Makhana', monthlyQty: '२५० ग्रॅम', benefit: 'कमी कॅलरी, जास्त कॅल्शियम असलेला क्रंची स्नॅक' },
-  { id: 's3', category: 'हेल्दी स्नॅक्स', name: 'बदाम आणि अक्रोड', englishName: 'Almonds & Walnuts', monthlyQty: '५०० ग्रॅम', benefit: 'मेंदू व हृदयासाठी उत्तम निरोगी फॅट्स' }
+  { id: 's1', category: 'हेल्दी स्नॅक्स', name: 'भाजलेले चणे (फुटाणे)', englishName: 'Roasted Chana', monthlyQty: '१ किलो', benefit: 'संध्याकाळच्या अल्पोपहारासाठी प्रथिने व फायबरचा स्रोत' },
+  { id: 's2', category: 'हेल्दी स्नॅक्स', name: 'मखाने (Foxnuts)', englishName: 'Phool Makhana', monthlyQty: '२५० ग्रॅम', benefit: 'हलका कुरकुरीत अल्पोपहार; पोषणमूल्य उत्पादनानुसार बदलते' },
+  { id: 's3', category: 'हेल्दी स्नॅक्स', name: 'बदाम आणि अक्रोड', englishName: 'Almonds & Walnuts', monthlyQty: '५०० ग्रॅम', benefit: 'असंतृप्त चरबी व इतर पोषक घटकांचा स्रोत' }
 ];
 
 export const PROTEIN_COST_ANALYSIS = [
