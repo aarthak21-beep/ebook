@@ -61,7 +61,7 @@ export const MealPlansSection: React.FC = () => {
             ७ दिवसांचे संपूर्ण डाएट शेड्युल
           </h2>
           <p className="text-sm text-stone-600 dark:text-stone-300 max-w-xl">
-            सकाळी ६:३० वाजल्यापासून रात्री १० वाजेपर्यंत जेवणाची अचूक वेळ, कॅलरी व प्रोटीनचे प्रमाण. हे शेड्युल दर आठवड्याला चक्राकार पद्धतीने (Cycle) ३० दिवस चालू ठेवा.
+            सकाळपासून रात्रीपर्यंत जेवणाच्या वेळा, पदार्थ आणि अंदाजे पोषणमूल्ये. हा ७ दिवसांचा नमुना आहे; आवडीनुसार पर्याय बदलून वापरा. ३० दिवस एकच प्रमाण सर्वांना योग्य असेलच असे नाही.
           </p>
         </div>
 
@@ -88,6 +88,24 @@ export const MealPlansSection: React.FC = () => {
             मांसाहारी (Non-Veg Plan)
           </button>
         </div>
+      </div>
+
+      {/* Household portion guide */}
+      <div className="rounded-2xl border border-amber-200 bg-amber-50/70 dark:bg-stone-900 dark:border-stone-700 p-5 space-y-3">
+        <div className="flex items-center gap-2 text-emerald-900 dark:text-emerald-300 font-bold">
+          <Sparkles className="w-4 h-4" />
+          <h3 className="text-lg">प्रमाण समजून घ्या — घरगुती मापं</h3>
+        </div>
+        <p className="text-xs text-stone-600 dark:text-stone-300">खालील मापं चार्टमधील “वाटी / कप / भाकरी” समजण्यासाठी संदर्भ म्हणून आहेत. भांड्यांच्या आकारानुसार प्रमाण बदलू शकते.</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-sm text-stone-800 dark:text-stone-200">
+          <div className="rounded-lg bg-white dark:bg-stone-800 p-3"><strong>१ मध्यम वाटी</strong><br/>सुमारे १५० ml — शिजलेली डाळ/उसळ/भाजी</div>
+          <div className="rounded-lg bg-white dark:bg-stone-800 p-3"><strong>१ कप</strong><br/>सुमारे २०० ml — दूध, ताक किंवा सूप</div>
+          <div className="rounded-lg bg-white dark:bg-stone-800 p-3"><strong>१ मध्यम पोळी</strong><br/>सुमारे ६ इंच; पीठ साधारण ३० g</div>
+          <div className="rounded-lg bg-white dark:bg-stone-800 p-3"><strong>१ मध्यम भाकरी</strong><br/>साधारण ६–७ इंच; पिठाच्या प्रमाणानुसार आकार बदलेल</div>
+          <div className="rounded-lg bg-white dark:bg-stone-800 p-3"><strong>१ चमचा तेल</strong><br/>५ ml; शक्यतो मोजून वापरा</div>
+          <div className="rounded-lg bg-white dark:bg-stone-800 p-3"><strong>मासे / चिकन</strong><br/>चार्टमध्ये ग्रॅम दिले असल्यास ते शिजवण्यापूर्वीचे की नंतरचे हे तपासा; अंदाजे पोर्शन म्हणून घ्या</div>
+        </div>
+        <p className="text-xs text-stone-600 dark:text-stone-300">ताटाचा साधारण अर्धा भाग भाज्या/सलाड, चतुर्थांश धान्य आणि चतुर्थांश प्रथिनयुक्त पदार्थ ठेवा. भूक, शरीराचा आकार, हालचाल व आरोग्यानुसार प्रमाण बदला; गर्भावस्था, मधुमेह, किडनी/हृदयविकार किंवा औषधे असल्यास आहारतज्ज्ञ/डॉक्टरांचा सल्ला घ्या.</p>
       </div>
 
       {/* Days Tabs (Mon - Sun) */}
