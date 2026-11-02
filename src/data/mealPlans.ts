@@ -6,7 +6,7 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
     dayName: 'सोमवार (Day 1)',
     focus: 'फायबरयुक्त आणि संतुलित सुरुवात',
     totalCalories: 1550,
-    totalProtein: 62,
+    totalProtein: 63,
     meals: {
       earlyMorning: {
         time: '६:३० - ७:०० AM',
@@ -68,8 +68,8 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 2,
     dayName: 'मंगळवार (Day 2)',
     focus: 'प्रथिन समृद्ध शाकाहारी दिवस',
-    totalCalories: 1580,
-    totalProtein: 68,
+    totalCalories: 1520,
+    totalProtein: 65,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
@@ -184,8 +184,8 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 4,
     dayName: 'गुरुवार (Day 4)',
     focus: 'पोटाचे आरोग्य आणि प्रोबायोटिक्स',
-    totalCalories: 1540,
-    totalProtein: 61,
+    totalCalories: 1480,
+    totalProtein: 59,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
@@ -242,7 +242,7 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 5,
     dayName: 'शुक्रवार (Day 5)',
     focus: 'चयापचय आणि संतुलित ऊर्जा',
-    totalCalories: 1560,
+    totalCalories: 1555,
     totalProtein: 66,
     meals: {
       earlyMorning: {
@@ -300,8 +300,8 @@ export const VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 6,
     dayName: 'शनिवार (Day 6)',
     focus: 'मायक्रोन्यूट्रिएंट्स आणि अँटीऑक्सिडंट्स',
-    totalCalories: 1530,
-    totalProtein: 63,
+    totalCalories: 1470,
+    totalProtein: 61,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
@@ -420,7 +420,7 @@ export const NON_VEG_7_DAY_PLAN: DayDietPlan[] = [
     dayName: 'सोमवार (Day 1)',
     focus: 'अंडी व हाय प्रोटीन किकस्टार्ट',
     totalCalories: 1580,
-    totalProtein: 82,
+    totalProtein: 83,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
@@ -477,8 +477,8 @@ export const NON_VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 2,
     dayName: 'मंगळवार (Day 2 - हलका दिवस)',
     focus: 'शाकाहारी बॅलन्स व पचन विश्रांती',
-    totalCalories: 1520,
-    totalProtein: 65,
+    totalCalories: 1460,
+    totalProtein: 63,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
@@ -593,8 +593,8 @@ export const NON_VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 4,
     dayName: 'गुरुवार (Day 4)',
     focus: 'संतुलित शाकाहारी दिवस',
-    totalCalories: 1510,
-    totalProtein: 62,
+    totalCalories: 1450,
+    totalProtein: 59,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
@@ -709,8 +709,8 @@ export const NON_VEG_7_DAY_PLAN: DayDietPlan[] = [
     day: 6,
     dayName: 'शनिवार (Day 6)',
     focus: 'अंडी व हायड्रेशन',
-    totalCalories: 1560,
-    totalProtein: 80,
+    totalCalories: 1500,
+    totalProtein: 78,
     meals: {
       earlyMorning: {
         time: '६:३० AM',
