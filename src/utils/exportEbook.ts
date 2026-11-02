@@ -92,6 +92,25 @@ export function downloadStandaloneEbook() {
     </div>
   `).join('');
 
+  const challengeHtml = THIRTY_DAY_CHALLENGE.map((item) => `
+    <tr><td>${escapeHtml(item.day)}</td><td>${escapeHtml(item.title)}</td><td>${escapeHtml(item.task)}</td></tr>
+  `).join('');
+
+  const groceryHtml = GROCERY_LIST.map((item) => `
+    <tr><td>${escapeHtml(item.category)}</td><td>${escapeHtml(item.name)}</td><td>${escapeHtml(item.monthlyQty)}</td></tr>
+  `).join('');
+
+  const proteinHtml = PROTEIN_COST_ANALYSIS.map((item) => `
+    <tr><td>${escapeHtml(item.food)}</td><td>${escapeHtml(item.proteinPer100g)}</td><td>${escapeHtml(item.approxCostPerKg)}</td><td>${escapeHtml(item.costPer10gProtein)}</td></tr>
+  `).join('');
+
+  const workoutHtml = WORKOUT_ROUTINE.map((phase) => `
+    <section class="workout-phase">
+      <h3>${escapeHtml(phase.phase)}</h3>
+      <ul>${phase.exercises.map((exercise) => `<li><strong>${escapeHtml(exercise.name)}</strong> — ${escapeHtml(exercise.reps)}<br/><span>${escapeHtml(exercise.note)}</span></li>`).join('')}</ul>
+    </section>
+  `).join('');
+
   const htmlContent = `<!DOCTYPE html>
 <html lang="mr">
 <head>
@@ -123,7 +142,7 @@ export function downloadStandaloneEbook() {
     .day-plan { margin-bottom: 20px; }
     table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
     th, td { border: 1px solid #d1d5db; padding: 8px; text-align: left; }
-    th { background: #f3f4f6; width: 120px; }
+    th { background: #f3f4f6; width: 120px; }\n    thead { display: table-header-group; }\n    tr, .workout-phase { break-inside: avoid; page-break-inside: avoid; }\n    td, th { overflow-wrap: anywhere; vertical-align: top; }\n    .workout-phase { margin: 12px 0; }
   </style>
 </head>
 <body>
@@ -157,6 +176,30 @@ export function downloadStandaloneEbook() {
   <div class="page-break">
     <h2 style="color: #1b4332; border-bottom: 2px solid #1b4332;">१० पौष्टिक महाराष्ट्रीयन रेसिपीज</h2>
     ${recipesHtml}
+  </div>
+
+  <div class="page-break">
+    <h2 style="color: #1b4332;">३० दिवसांचे छोटे सवय-आव्हान</h2>
+    <p>आपल्या क्षमता, वेळ आणि आरोग्यानुसार कृतीत बदल करा. एखादा दिवस चुकल्यास पुढे सुरू ठेवा.</p>
+    <table><thead><tr><th>दिवस</th><th>सवय</th><th>आजची कृती</th></tr></thead><tbody>${challengeHtml}</tbody></table>
+  </div>
+
+  <div class="page-break">
+    <h2 style="color: #1b4332;">घरासाठी किराणा यादी</h2>
+    <p>खालील प्रमाणे केवळ संदर्भासाठी आहेत; कुटुंबातील सदस्य, आवड, बजेट आणि गरजेनुसार प्रमाण ठरवा.</p>
+    <table><thead><tr><th>विभाग</th><th>पदार्थ</th><th>सुचवलेले प्रमाण</th></tr></thead><tbody>${groceryHtml}</tbody></table>
+  </div>
+
+  <div class="page-break">
+    <h2 style="color: #1b4332;">बजेटमध्ये प्रथिनांचे पर्याय</h2>
+    <p>किंमती अंदाजे असून ठिकाण, हंगाम व बाजारानुसार बदलू शकतात. पोषणमूल्ये अन्नाच्या प्रकार व तयारीनुसार बदलतात.</p>
+    <table><thead><tr><th>पदार्थ</th><th>प्रथिने</th><th>अंदाजे किंमत</th><th>१०g प्रथिनांची अंदाजे किंमत</th></tr></thead><tbody>${proteinHtml}</tbody></table>
+  </div>
+
+  <div class="page-break">
+    <h2 style="color: #1b4332;">घरच्या घरी व्यायामाची रूपरेषा</h2>
+    <p>व्यायाम आपल्या क्षमतेनुसार करा. वेदना, चक्कर किंवा अस्वस्थता जाणवल्यास थांबा; आरोग्यविषयक अडचणी असल्यास तज्ज्ञांचा सल्ला घ्या.</p>
+    ${workoutHtml}
   </div>
 
   <div class="page-break" style="text-align: center; padding: 40px 20px;">
