@@ -41,7 +41,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
       <div className="max-w-[210mm] mx-auto space-y-8 print:space-y-0 print:max-w-none">
         
         {/* PAGE 1: Front Cover */}
-        <section className="a4-sheet page-break-after bg-[#1b4332] text-white flex flex-col justify-between border-4 border-yellow-400/40 relative overflow-hidden">
+        <section className="a4-sheet ebook-cover page-break-after bg-[#1b4332] text-white flex flex-col justify-between border-4 border-yellow-400/40 relative overflow-hidden">
           <div className="space-y-4 pt-6 text-center">
             <div className="text-yellow-300 font-bold tracking-widest text-sm uppercase">
               महाराष्ट्र आरोग्य व पोषण मालिका
