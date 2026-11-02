@@ -43,7 +43,7 @@ export const CoverPage: React.FC<CoverPageProps> = ({ onStartReading, onOpenMeal
               </button>
             </div>
             <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/15 pt-5 text-xs text-emerald-200">
-              <div className="flex flex-col gap-1"><span>लेखक: <strong className="text-white">{EBOOK_META.author}</strong></span><span>प्रकाशक संस्था: <strong className="text-white">{EBOOK_META.publisher}</strong></span></div>
+              <div className="flex flex-col gap-1"><span>लेखक: <strong className="text-white">{EBOOK_META.author}</strong></span><span>प्रकाशक: <strong className="text-white">{EBOOK_META.publisher}</strong></span><span>संस्था: <strong className="text-white">{EBOOK_META.organization}</strong></span></div>
               <span className="rounded-full bg-amber-300 px-4 py-2 text-sm font-extrabold text-emerald-950">किंमत {EBOOK_META.price}</span>
             </div>
             <div className="mt-4 rounded-xl border border-amber-200/25 bg-white/[0.06] px-4 py-3 text-xs leading-6 text-emerald-50/90"><strong className="text-amber-200">पेमेंट सुविधा लवकरच सुरू होईल.</strong><span className="block">सध्या ऑनलाइन खरेदी / पेमेंट सक्रिय नाही. पेमेंट सुरू झाल्यावरच खरेदीची लिंक येथे दिली जाईल.</span></div>
