@@ -147,7 +147,7 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
 
             {/* Pro Tip */}
             <div className="p-3 bg-amber-50 dark:bg-amber-950/40 rounded-lg border border-amber-200 dark:border-amber-900/40 text-xs text-amber-900 dark:text-amber-200">
-              <span className="font-bold">न्यूट्रिशनिस्ट टीप: </span>
+              <span className="font-bold">घरगुती टीप: </span>
               {recipe.proTip}
             </div>
           </div>
