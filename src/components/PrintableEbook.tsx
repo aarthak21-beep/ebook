@@ -71,6 +71,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             </div>
             <div className="pt-4 border-t border-emerald-700/80 flex justify-between text-xs text-yellow-200 px-6 font-mono">
               <span>लेखक: {EBOOK_META.author}</span>
+              <span>प्रकाशक: {EBOOK_META.publisher}</span>
               <span>किंमत: {EBOOK_META.price}</span>
             </div>
           </div>
@@ -367,7 +368,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
           </div>
 
           <div className="pt-8 border-t border-emerald-800 text-xs text-yellow-300">
-            प्रकाशक: मराठी फिटनेस गाईड · संपर्क व अभिप्राय: feedback@marathifitness.in
+            प्रकाशक संस्था: {EBOOK_META.publisher} · लेखक: {EBOOK_META.author}
           </div>
         </section>
 
