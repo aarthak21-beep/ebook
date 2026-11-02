@@ -269,11 +269,12 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
                   <span className="shrink-0 rounded-full bg-emerald-50 px-2 py-1 text-[10px] text-emerald-800">{r.servings} जणांसाठी</span>
                 </div>
                 <div className="text-[11px] text-stone-600">तयारी: {r.prepTime} · शिजवणे: {r.cookTime}</div>
+                <div className="text-[9px] text-stone-500">प्रति सर्व्हिंग अंदाजे पोषणमूल्ये</div>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px] font-semibold text-emerald-900">
-                  <div className="bg-emerald-50 rounded p-2">ऊर्जा: {r.calories} kcal</div>
-                  <div className="bg-emerald-50 rounded p-2">प्रोटीन: {r.protein}g</div>
-                  <div className="bg-emerald-50 rounded p-2">कार्ब्स: {r.carbs}g</div>
-                  <div className="bg-emerald-50 rounded p-2">फायबर: {r.fiber}g</div>
+                  <div className="bg-emerald-50 rounded p-2">ऊर्जा: ~{r.calories} kcal</div>
+                  <div className="bg-emerald-50 rounded p-2">प्रोटीन: ~{r.protein}g</div>
+                  <div className="bg-emerald-50 rounded p-2">कार्ब्स: ~{r.carbs}g</div>
+                  <div className="bg-emerald-50 rounded p-2">फायबर: ~{r.fiber}g</div>
                 </div>
                 <div>
                   <h4 className="text-xs font-bold text-stone-900 mb-1">लागणारे साहित्य</h4>
