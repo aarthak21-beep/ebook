@@ -48,10 +48,11 @@ export const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
 
         {/* Macro Pill Grid (Tabular Numerals) */}
         <div className="grid grid-cols-4 gap-2 bg-[#fdfbf7] dark:bg-stone-800/60 p-3 rounded-xl border border-amber-100 dark:border-stone-800 text-center">
+          <div className="col-span-4 text-[10px] text-stone-500">प्रति सर्व्हिंग अंदाजे पोषणमूल्ये</div>
           <div>
             <div className="text-[11px] text-stone-500 dark:text-stone-400">कॅलरीज</div>
             <div className="text-base font-bold text-stone-900 dark:text-stone-100 font-mono tabular-nums">
-              {recipe.calories}
+              ~{recipe.calories}
             </div>
           </div>
           <div>
