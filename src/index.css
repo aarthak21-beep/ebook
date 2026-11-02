@@ -71,6 +71,9 @@ main { isolation: isolate; }
   img { max-width: 100% !important; height: auto; }
   figure, article, tr, .rounded-xl, .rounded-lg, .rounded, .border-b,
   h1, h2, h3, h4, img { page-break-inside: avoid; break-inside: avoid; }
+  h1, h2, h3, h4 { page-break-after: avoid; break-after: avoid-page; }
+  h2 + p, h3 + p, h4 + p, h2 + ul, h3 + ul, h4 + ul { page-break-before: avoid; break-before: avoid-page; }
+  .a4-sheet > :last-child { page-break-after: auto; break-after: auto; }
   p, li { orphans: 3; widows: 3; }
   table { width: 100%; table-layout: fixed; border-collapse: collapse; }
   th, td { overflow-wrap: anywhere; }
