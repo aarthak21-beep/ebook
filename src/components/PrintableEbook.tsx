@@ -178,7 +178,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             </div>
 
             <div className="text-[10px] text-stone-400 text-right pt-4 border-t border-stone-200">
-              घरचं जेवण, फिट शरीर! · पृष्ठ {ch.id + 2}
+              घरचं जेवण, फिट शरीर! · प्रकरण {ch.id}
             </div>
           </section>
         ))}
