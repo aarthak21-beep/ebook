@@ -173,5 +173,6 @@ export function downloadStandaloneEbook() {
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
-  URL.revokeObjectURL(url);
+  // Keep the object URL alive briefly so mobile browsers can begin the download.
+  window.setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
