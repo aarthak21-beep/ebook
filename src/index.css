@@ -1,0 +1,103 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1c2826;
+    background-color: #faf8f5;
+  }
+}
+
+.font-marathi-display {
+  font-family: 'Rozha One', 'Noto Sans Devanagari', serif;
+}
+
+.font-marathi-accent {
+  font-family: 'Yatra One', 'Noto Sans Devanagari', cursive;
+}
+
+.font-marathi-body {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Print and A4 Ebook Formatting */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .page-break-before {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page-break-inside-avoid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .a4-page-frame {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+  }
+}
+
+/* Screen A4 Simulator */
+.a4-sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 2rem auto;
+  background: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+  padding: 18mm 20mm;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .a4-sheet {
+    width: 100%;
+    min-height: auto;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d6a4f;
+  border-radius: 3px;
+}
+
