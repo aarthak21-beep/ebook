@@ -247,20 +247,36 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
             <p className="text-xs text-stone-500">कमी तेल, जास्त प्रथिने व पारंपरिक चवीचा परिपूर्ण मेळ</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 text-xs">
+          <div className="mb-3 grid grid-cols-2 gap-3">
+            <img src={breakfastImage} alt="घरगुती पौष्टिक नाश्ता" className="w-full h-32 object-cover rounded-xl" />
+            <img src={proteinImage} alt="डाळी आणि प्रथिनयुक्त पदार्थ" className="w-full h-32 object-cover rounded-xl" />
+          </div>
+          <div className="space-y-4">
             {HEALTHY_RECIPES.map((r) => (
-              <div key={r.id} className="p-3 border border-stone-300 rounded-lg bg-stone-50 space-y-1">
-                <div className="font-bold text-emerald-900">{r.id}. {r.title}</div>
-                <div className="font-mono text-[11px] text-stone-600">
-                  कॅलरी: {r.calories} | प्रोटीन: {r.protein}g | कार्ब्स: {r.carbs}g | फायबर: {r.fiber}g
+              <article key={r.id} className="p-4 border border-stone-300 rounded-xl bg-white space-y-2 break-inside-avoid">
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-bold text-base text-emerald-900">{r.id}. {r.title}</h3>
+                  <span className="shrink-0 rounded-full bg-emerald-50 px-2 py-1 text-[10px] text-emerald-800">{r.servings} जणांसाठी</span>
                 </div>
-                <p className="text-[11px] text-stone-600 line-clamp-2">
-                  <strong>साहित्य:</strong> {r.ingredients.slice(0, 4).join(', ')}...
-                </p>
-                <div className="text-[10px] text-emerald-700 italic">
-                  लाभ: {r.nutritionBenefit}
+                <div className="text-[11px] text-stone-600">तयारी: {r.prepTime} · शिजवणे: {r.cookTime}</div>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px] font-semibold text-emerald-900">
+                  <div className="bg-emerald-50 rounded p-2">ऊर्जा: {r.calories} kcal</div>
+                  <div className="bg-emerald-50 rounded p-2">प्रोटीन: {r.protein}g</div>
+                  <div className="bg-emerald-50 rounded p-2">कार्ब्स: {r.carbs}g</div>
+                  <div className="bg-emerald-50 rounded p-2">फायबर: {r.fiber}g</div>
                 </div>
-              </div>
+                <div>
+                  <h4 className="text-xs font-bold text-stone-900 mb-1">लागणारे साहित्य</h4>
+                  <ul className="list-disc list-inside text-[11px] leading-relaxed text-stone-700 columns-2">{r.ingredients.map((item, i) => <li key={i} className="mb-0.5">{item}</li>)}</ul>
+                </div>
+                <div>
+                  <h4 className="text-xs font-bold text-stone-900 mb-1">कृती</h4>
+                  <ol className="list-decimal list-inside text-[11px] leading-relaxed text-stone-700 space-y-1">{r.instructions.map((step, i) => <li key={i}>{step}</li>)}</ol>
+                </div>
+                <p className="text-[11px] text-emerald-800"><strong>पोषणविषयक माहिती:</strong> {r.nutritionBenefit}</p>
+                <p className="text-[11px] text-amber-800"><strong>किचन टिप:</strong> {r.proTip}</p>
+                <p className="text-[10px] text-stone-500">टीप: पोषणमूल्ये अंदाजे आहेत; साहित्याचा ब्रँड, प्रमाण आणि शिजवण्याच्या पद्धतीनुसार बदलू शकतात.</p>
+              </article>
             ))}
           </div>
         </section>
