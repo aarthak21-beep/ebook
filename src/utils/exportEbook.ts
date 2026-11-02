@@ -3,28 +3,30 @@ import { HEALTHY_RECIPES } from '../data/recipes';
 import { VEG_7_DAY_PLAN, NON_VEG_7_DAY_PLAN } from '../data/mealPlans';
 import { THIRTY_DAY_CHALLENGE, GROCERY_LIST, PROTEIN_COST_ANALYSIS, WORKOUT_ROUTINE } from '../data/toolsData';
 
+const escapeHtml = (value: unknown) => String(value ?? '').replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char] || char);
+
 export function downloadStandaloneEbook() {
   const chaptersHtml = CHAPTERS.map((ch) => `
     <div class="page-break chapter-box">
       <div class="chapter-header">
         <span class="chapter-num">प्रकरण ${ch.id}</span>
-        <h2>${ch.title}</h2>
-        <div class="english-title">${ch.englishTitle} · ${ch.readTimeMinutes} मिनिटे वाचन</div>
+        <h2>${escapeHtml(ch.title)}</h2>
+        <div class="english-title">${escapeHtml(ch.englishTitle)} · ${ch.readTimeMinutes} मिनिटे वाचन</div>
       </div>
-      <div class="summary-box">"${ch.summary}"</div>
+      <div class="summary-box">"${escapeHtml(ch.summary)}"</div>
       <div class="sections">
         ${ch.sections.map((sec) => `
           <div class="section-item">
-            <h3>${sec.heading}</h3>
-            ${(sec.content || []).map((p) => `<p>${p}</p>`).join('')}
+            <h3>${escapeHtml(sec.heading)}</h3>
+            ${(sec.content || []).map((p) => `<p>${escapeHtml(p)}</p>`).join('')}
             ${sec.callout ? `
               <div class="callout ${sec.callout.type}">
-                <strong>${sec.callout.title}:</strong> ${sec.callout.text}
+                <strong>${escapeHtml(sec.callout.title)}:</strong> ${escapeHtml(sec.callout.text)}
               </div>
             ` : ''}
             ${sec.bulletPoints ? `
               <ul>
-                ${sec.bulletPoints.map((bp) => `<li>${bp}</li>`).join('')}
+                ${sec.bulletPoints.map((bp) => `<li>${escapeHtml(bp)}</li>`).join('')}
               </ul>
             ` : ''}
           </div>
@@ -33,7 +35,7 @@ export function downloadStandaloneEbook() {
       <div class="takeaways">
         <strong>प्रकरणाचे मुख्य सार:</strong>
         <ul>
-          ${ch.keyTakeaways.map((kt) => `<li>✓ ${kt}</li>`).join('')}
+          ${ch.keyTakeaways.map((kt) => `<li>✓ ${escapeHtml(kt)}</li>`).join('')}
         </ul>
       </div>
     </div>
@@ -41,51 +43,51 @@ export function downloadStandaloneEbook() {
 
   const recipesHtml = HEALTHY_RECIPES.map((r) => `
     <div class="recipe-card">
-      <h3>${r.id}. ${r.title}</h3>
+      <h3>${r.id}. ${escapeHtml(r.title)}</h3>
       <div class="recipe-meta">
-        वेळ: ${r.cookTime} | व्यक्ती: ${r.servings} | कॅलरी: ${r.calories} kcal | प्रोटीन: ${r.protein}g | कार्ब्स: ${r.carbs}g | फायबर: ${r.fiber}g
+        वेळ: ${escapeHtml(r.cookTime)} | व्यक्ती: ${escapeHtml(r.servings)} | कॅलरी: ~${escapeHtml(r.calories)} kcal | प्रोटीन: ~${escapeHtml(r.protein)}g | कार्ब्स: ~${escapeHtml(r.carbs)}g | फायबर: ~${escapeHtml(r.fiber)}g (अंदाजे)
       </div>
       <div class="ingredients">
         <strong>साहित्य:</strong>
         <ul>
-          ${r.ingredients.map((ing) => `<li>${ing}</li>`).join('')}
+          ${r.ingredients.map((ing) => `<li>${escapeHtml(ing)}</li>`).join('')}
         </ul>
       </div>
       <div class="instructions">
         <strong>कृती:</strong>
         <ol>
-          ${r.instructions.map((ins) => `<li>${ins}</li>`).join('')}
+          ${r.instructions.map((ins) => `<li>${escapeHtml(ins)}</li>`).join('')}
         </ol>
       </div>
       <div class="tip-box">
-        <strong>आरोग्य लाभ:</strong> ${r.nutritionBenefit}<br/>
-        <strong>टीप:</strong> ${r.proTip}
+        <strong>घरगुती टीप:</strong> ${escapeHtml(r.nutritionBenefit)}<br/>
+        <strong>टीप:</strong> ${escapeHtml(r.proTip)}
       </div>
     </div>
   `).join('');
 
   const vegPlanHtml = VEG_7_DAY_PLAN.map((d) => `
     <div class="day-plan">
-      <h4>${d.dayName} (${d.focus}) - ${d.totalCalories} kcal, ${d.totalProtein}g प्रोटीन</h4>
+      <h4>${escapeHtml(d.dayName)} (${escapeHtml(d.focus)}) - अंदाजे ${escapeHtml(d.totalCalories)} kcal, ${escapeHtml(d.totalProtein)}g प्रोटीन</h4>
       <table>
-        <tr><th>सकाळ</th><td>${d.meals.earlyMorning.items.join(', ')}</td></tr>
-        <tr><th>नाश्ता</th><td>${d.meals.breakfast.items.join(', ')}</td></tr>
-        <tr><th>दुपार</th><td>${d.meals.lunch.items.join(', ')}</td></tr>
-        <tr><th>संध्याकाळ</th><td>${d.meals.eveningSnack.items.join(', ')}</td></tr>
-        <tr><th>रात्र</th><td>${d.meals.dinner.items.join(', ')}</td></tr>
+        <tr><th>सकाळ</th><td>${escapeHtml(d.meals.earlyMorning.items.join(', '))}</td></tr>
+        <tr><th>नाश्ता</th><td>${escapeHtml(d.meals.breakfast.items.join(', '))}</td></tr>
+        <tr><th>दुपार</th><td>${escapeHtml(d.meals.lunch.items.join(', '))}</td></tr>
+        <tr><th>संध्याकाळ</th><td>${escapeHtml(d.meals.eveningSnack.items.join(', '))}</td></tr>
+        <tr><th>रात्र</th><td>${escapeHtml(d.meals.dinner.items.join(', '))}</td></tr>
       </table>
     </div>
   `).join('');
 
   const nonVegPlanHtml = NON_VEG_7_DAY_PLAN.map((d) => `
     <div class="day-plan">
-      <h4>${d.dayName} (${d.focus}) - ${d.totalCalories} kcal, ${d.totalProtein}g प्रोटीन</h4>
+      <h4>${escapeHtml(d.dayName)} (${escapeHtml(d.focus)}) - अंदाजे ${escapeHtml(d.totalCalories)} kcal, ${escapeHtml(d.totalProtein)}g प्रोटीन</h4>
       <table>
-        <tr><th>सकाळ</th><td>${d.meals.earlyMorning.items.join(', ')}</td></tr>
-        <tr><th>नाश्ता</th><td>${d.meals.breakfast.items.join(', ')}</td></tr>
-        <tr><th>दुपार</th><td>${d.meals.lunch.items.join(', ')}</td></tr>
-        <tr><th>संध्याकाळ</th><td>${d.meals.eveningSnack.items.join(', ')}</td></tr>
-        <tr><th>रात्र</th><td>${d.meals.dinner.items.join(', ')}</td></tr>
+        <tr><th>सकाळ</th><td>${escapeHtml(d.meals.earlyMorning.items.join(', '))}</td></tr>
+        <tr><th>नाश्ता</th><td>${escapeHtml(d.meals.breakfast.items.join(', '))}</td></tr>
+        <tr><th>दुपार</th><td>${escapeHtml(d.meals.lunch.items.join(', '))}</td></tr>
+        <tr><th>संध्याकाळ</th><td>${escapeHtml(d.meals.eveningSnack.items.join(', '))}</td></tr>
+        <tr><th>रात्र</th><td>${escapeHtml(d.meals.dinner.items.join(', '))}</td></tr>
       </table>
     </div>
   `).join('');
@@ -94,7 +96,7 @@ export function downloadStandaloneEbook() {
 <html lang="mr">
 <head>
   <meta charset="UTF-8">
-  <title>${EBOOK_META.title} - ${EBOOK_META.subtitle}</title>
+  <title>${escapeHtml(EBOOK_META.title)} - ${escapeHtml(EBOOK_META.subtitle)}</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap');
     @page { size: A4; margin: 15mm; }
@@ -131,11 +133,11 @@ export function downloadStandaloneEbook() {
 
   <div class="cover-page page-break">
     <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 14px; color: #a7f3d0;">महाराष्ट्र आरोग्य व पोषण गाईड</p>
-    <h1>${EBOOK_META.title}</h1>
-    <h2>${EBOOK_META.subtitle}</h2>
-    <p>लेखक: ${EBOOK_META.author} · किंमत: ${EBOOK_META.price}</p>
+    <h1>${escapeHtml(EBOOK_META.title)}</h1>
+    <h2>${escapeHtml(EBOOK_META.subtitle)}</h2>
+    <p>लेखक: ${escapeHtml(EBOOK_META.author)} · प्रकाशक: ${escapeHtml(EBOOK_META.publisher)} · संस्था: ${escapeHtml(EBOOK_META.organization)} · किंमत: ${escapeHtml(EBOOK_META.price)}</p>
     <div class="disclaimer" style="color: #1f2937; text-align: left; margin-top: 30px;">
-      <strong>वैद्यकीय इशारा:</strong> ${EBOOK_META.disclaimer}
+      <strong>वैद्यकीय इशारा:</strong> ${escapeHtml(EBOOK_META.disclaimer)}
     </div>
   </div>
 
