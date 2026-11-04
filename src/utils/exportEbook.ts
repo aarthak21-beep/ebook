@@ -222,7 +222,7 @@ export function downloadStandaloneEbook() {
   <div class="page-break" style="text-align: center; padding: 40px 20px;">
     <h2 style="color: #1b4332;">अभिनंदन!</h2>
     <p>तुम्ही तुमच्या आरोग्याची गुरुकिल्ली मिळवली आहे. सातत्य ठेवा आणि घरच्या साध्या जेवणाचा आनंद घ्या!</p>
-    <p><strong>मराठी फिटनेस गाईड</strong></p>
+    <p><strong>MOTI फिटनेस गाईड</strong></p>
   </div>
 </body>
 </html>`;
