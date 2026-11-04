@@ -349,7 +349,7 @@ export const PrintableEbook: React.FC<PrintableEbookProps> = ({ onBackToApp }) =
         </section>
 
         {/* FINAL MOTIVATIONAL PAGE */}
-        <section className="a4-sheet bg-emerald-950 text-white flex flex-col justify-between text-center p-12">
+        <section className="a4-sheet final-motivational-page bg-emerald-950 text-white flex flex-col justify-between text-center p-12">
           <div className="space-y-4">
             <Award className="w-16 h-16 text-yellow-300 mx-auto" />
             <h2 className="text-3xl font-bold font-marathi-display text-white">
