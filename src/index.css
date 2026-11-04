@@ -76,6 +76,25 @@ main { isolation: isolate; }
   }
   .ebook-cover h1 { color: #ffffff !important; }
   .ebook-cover p { color: #fef3c7 !important; }
+
+  /* Keep the final motivational page readable even when print backgrounds are disabled. */
+  .final-motivational-page {
+    background: #ffffff !important;
+    color: #174b38 !important;
+    print-color-adjust: economy !important;
+    -webkit-print-color-adjust: economy !important;
+  }
+  .final-motivational-page,
+  .final-motivational-page * {
+    color: #174b38 !important;
+  }
+  .final-motivational-page svg {
+    color: #a16207 !important;
+  }
+  .final-motivational-page > div:last-child {
+    border-color: #9ca3af !important;
+    color: #805500 !important;
+  }
   .a4-sheet { width: 100% !important; min-height: 0 !important; box-shadow: none !important; border-radius: 0 !important; border: none !important; padding: 0 !important; margin: 0 !important; max-width: 100% !important; }
   img { max-width: 100% !important; height: auto; }
   figure, article, tr, .rounded-xl, .rounded-lg, .rounded, .border-b,
